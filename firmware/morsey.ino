@@ -3,7 +3,6 @@
 
 //define the pins
 #define BTN PA2
-#define LED PC4
 #define BUZ PD6
 
 U8X8_SSD1306_128X64_NONAME_HW_I2C oled(U8X8_PIN_NONE);
@@ -32,7 +31,6 @@ void draw(){ oled.clear(); oled.print(text); if(sym.length()){oled.print(' ');ol
 //setup runs once
 void setup(){
   pinMode(BTN,INPUT_PULLUP);
-  pinMode(LED,OUTPUT);
   pinMode(BUZ,OUTPUT);
   oled.begin();
   oled.setFont(u8x8_font_chroma48medium8_r);
@@ -47,9 +45,9 @@ void loop(){
   if(!awake){ if(d){ skip=true; oled.setPowerSave(0); awake=true; last=now; draw(); } return; }
 
   //press logic
-  if(d && !down){ down=true; t=now; digitalWrite(LED,HIGH); tone(BUZ,1000); }   //pressed down
-  if(!d && down){                                                              //let go
-    down=false; digitalWrite(LED,LOW); noTone(BUZ);
+  if(d && !down){ down=true; t=now; tone(BUZ,1000); }   //pressed down
+  if(!d && down){                                       //let go
+    down=false; noTone(BUZ);
     if(skip) skip=false;                          //that press just woke it
     else if(now-t>20) sym+=(now-t<DOT)?'.':'-';   //dot or dash
     last=now; draw();
@@ -62,5 +60,5 @@ void loop(){
   if(!d && sym=="" && text!="" && now-last>WGAP && text[text.length()-1]!=' '){ text+=' '; draw(); }
 
   //screen off when idle
-  if(!d && sym=="" && now-last>SLEEP){ oled.setPowerSave(1); digitalWrite(LED,LOW); awake=false; }
+  if(!d && sym=="" && now-last>SLEEP){ oled.setPowerSave(1); awake=false; }
 }
