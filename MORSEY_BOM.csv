@@ -1,0 +1,13 @@
+No.,Qty,Comment,MPN,LCSC,Price (USD),Total (USD)
+1,1,the MCU (WCH),CH32V003J4M6,C5346354,0.2194,0.22
+2,1,"oled module, SSD1306 0.96 inch 128x64 i2c",GMC096GW,SSD1306 0.96,1.50,1.50
+3,1,the button (XUNPU),TS-1088-AR02016,C720477,0.053,0.05
+4,1,coin cell holder (QIJEY),CR2032-BS-6-1,C70377,0.138,0.14
+5,1,CR2032 battery,CR2032,local,0.20,0.20
+6,1,buzzer (Huaneng),MLT-5030,C95297,0.5404,0.54
+7,1,22 ohm res (Walsin),WR06X22R0FTL,C163887,0.0025,0.01
+8,1,100nF cap (Samsung),CL10B104KB8NNNC,C1591,0.0115,0.01
+9,1,10uF cap (Samsung),CL10A106KP8NNNC,C19702,0.0265,0.03
+10,1,keyring / split ring (through the hole),-,local,0.05,0.05
+11,1,PCB,-,JLCPCB,2.00,2.00
+,,,,,Total,4.75
