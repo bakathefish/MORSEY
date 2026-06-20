@@ -1,3 +1,7 @@
+
+<img width="468" height="665" alt="image" src="https://github.com/user-attachments/assets/e5c7a8f4-2c94-4bbe-aed2-ca8e1304eb37" />
+
+
 # MORSEY
 
 **a bare pcb keychain that decodes your morse code**
