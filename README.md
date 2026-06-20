@@ -54,3 +54,6 @@ everything is in the bom, heres the list:
 5. press the button to wake it, then tap your morse. theres no power switch, it sleeps on its own when idle.
 
 note: nothing to set up in the firmware, just flash it and go. tap `... --- ...` to test, you should see SOS.
+
+
+ps i added a 3d model if you want to use it but its not recommended since the pcb itself is very tiny anyways the pcb doesnt assemble with screws it has clips to attach the pieces
